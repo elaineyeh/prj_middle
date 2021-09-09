@@ -12,7 +12,7 @@ cd ../docker-compose
 FILE="docker-compose"
 FILENAME=`ls ./*.yml`
 echo $FILENAME
-for EACHFILE in FILENAME
+for EACHFILE in $FILENAME
 do
     FILE+=" -f $EACHFILE"
 done
