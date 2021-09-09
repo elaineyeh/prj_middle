@@ -5,7 +5,8 @@ pwd
 git pull
 
 mkdir -p ../docker-compose
-cp docker-compose.yml ../docker-compose
+envsubst < docker-compose.yml > docker-compose-$CIRCLE_PROJECT_REPONAME.yml
+cp docker-compose-$CIRCLE_PROJECT_REPONAME.yml ../docker-compose
 ls
 
 cd ../docker-compose
