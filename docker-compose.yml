@@ -3,6 +3,6 @@ services:
     ${CIRCLE_PROJECT_REPONAME}:
         image: nginx
         volumes:
-            - /home/ubuntu/conf.d:/etc/nginx/conf.d
+            - /home/ec2-user/nginx/conf.d:/etc/nginx/conf.d
         ports:
             - "80:80"
