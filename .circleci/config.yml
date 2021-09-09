@@ -15,4 +15,4 @@ jobs:
       - run: echo "Hello World"
       - run: echo $CIRCLE_PROJECT_REPONAME
       - run: envsubst '${CIRCLE_PROJECT_REPONAME}' < deploy.sh > real_deploy.sh
-      - run: ssh -o StrictHostKeyChecking=no $USER@$HOST
+      - run: ssh -o StrictHostKeyChecking=no $USER@$HOST < real_deploy.sh
